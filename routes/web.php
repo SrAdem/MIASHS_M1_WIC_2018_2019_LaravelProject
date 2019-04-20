@@ -16,6 +16,8 @@
 // });
 
 Route::get('/', 'HomeController@index');
-Route::get('/article', 'ArticleController@index');
+Route::get('/articles', 'ArticleController@index');
 Route::get('/contact', 'ContactController@index');
 Route::get('/articles/{post_name}', 'ArticleController@show');
+Route::get('contact','ContactController@create');
+Route::post('contact','ContactController@store');

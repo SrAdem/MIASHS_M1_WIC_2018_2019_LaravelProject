@@ -8,7 +8,10 @@ class ArticleController extends Controller
 {
     //
     function index() {
-        return view('article');
+        $posts = \App\Post::all();
+        return view('article', array(
+            'posts' => $posts
+        ));
     }
     
     function show($post_name) {

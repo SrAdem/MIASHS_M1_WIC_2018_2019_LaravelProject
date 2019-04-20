@@ -12,9 +12,9 @@
         <div class="top-bar-left">
             <ul class="menu">
                 <li class="menu-text">Blog</li>
-                <li><a href="./">Home</a></li>
-                <li><a href="./article">Articles</a></li>
-                <li><a href="./contact">Contact</a></li>
+                <li><a href="http://localhost:8000/">Home</a></li>
+                <li><a href="http://localhost:8000/articles">Articles</a></li>
+                <li><a href="http://localhost:8000/contact">Contact</a></li>
             </ul>
         </div>
     </div>
