@@ -10,4 +10,6 @@
 
 @endforeach
 </ul>
+
+{{$name}}
 @endsection

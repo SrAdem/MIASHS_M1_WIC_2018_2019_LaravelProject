@@ -22,7 +22,7 @@
     <div class="callout large primary">
         <div class="row column text-center">
             <h1>Notre Blog</h1>
-            <h2 class="subheader">Minou -\\n n//-</h2>
+            <h2 class="subheader">Adem GURBUZ & Orlane PITARCH</h2>
         </div>
     </div>
 
