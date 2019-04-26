@@ -39,9 +39,10 @@ class ArticleController extends Controller
         ));
     }
 
-    public function store(CommentsRequest $request, $post_name)
+    public function store(CommentsRequest $request)
     {
-        $post = \App\Post::where('post_name',$post_name)->first();
+        $post_id = $request->input('post_name');
+        $post = \App\Post::where('post_name',$post_id)->first();
         DB::table('comments')->insert(
             ['comment_name' => $request->input('comment_name'),
             'comment_email' => $request->input('comment_email'),

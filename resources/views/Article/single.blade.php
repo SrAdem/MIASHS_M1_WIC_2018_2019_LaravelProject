@@ -21,12 +21,15 @@
 </ol>
 
 <p> Ajouter un commentaire : </p>
-<form action="{{ url('/articles/{post_name}') }}" method="POST">
+<form action="{{ url('/articles/{post_name}')}}" method="POST">
     {{ csrf_field() }}
     <div class="form-group">
         <input type="text" class="form-control {{ $errors->has('comment_name') ? 'is-invalid' : '' }}" name="comment_name" id="comment_name" 
             placeholder="Titre" value="{{ old('comment_name') }}"> {!! $errors->first('comment_name', '
                 <div class="invalid-feedback">:message</div>') !!}
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="post_name" id="post_name" value="{{ $post->post_name }}"> 
     </div>
     <div class="form-group">
         <input type="email" class="form-control {{ $errors->has('comment_email') ? 'is-invalid' : '' }}" name="comment_email" id="comment_email" 

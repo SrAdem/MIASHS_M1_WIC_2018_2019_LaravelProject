@@ -20,6 +20,6 @@ Route::get('/articles', 'ArticleController@index');
 Route::get('/contact', 'ContactController@index');
 Route::get('contact','ContactController@create');
 Route::post('contact','ContactController@store');
-Route::get('/articles/{post_name}', 'ArticleController@show')->name('posts');
 Route::get('articles/{post_name}','ArticleController@create');
 Route::post('articles/{post_name}','ArticleController@store');
+Route::get('/articles/{post_name}', 'ArticleController@show')->name('posts');
