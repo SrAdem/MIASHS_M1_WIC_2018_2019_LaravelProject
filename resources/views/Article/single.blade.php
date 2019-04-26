@@ -1,6 +1,14 @@
 @extends('layouts/main')
 
 @section('content')
+<style>
+    .comment {
+        border:2px solid black;
+        background-color: #CCCCCC;
+        margin-bottom:5px;
+    }
+</style>
+
 <h1> {{ $post->post_title}} </h1>
 <h3> Auteur : {{ $nom_auteur}} </h3>
 
@@ -8,6 +16,7 @@
 
 <ol>
 @foreach ( $commentaires as $commentaire )
+<div class="comment">
     <li> 
         <ul>
             <li> Titre : {{$commentaire->comment_name}}</li>
@@ -16,7 +25,7 @@
             <li> Message : {{$commentaire->comment_content}}</li>
         </ul>
     </li>
-
+</div>
 @endforeach
 </ol>
 
