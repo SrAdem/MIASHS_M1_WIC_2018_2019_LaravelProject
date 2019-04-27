@@ -16,9 +16,8 @@
 // });
 
 Route::get('/', 'HomeController@index');
-Route::get('/articles', 'ArticleController@index');
 Route::get('/contact', 'ContactController@index');
 Route::get('contact','ContactController@create');
 Route::post('contact','ContactController@store');
-Route::post('articles/{post_name}','CommentsController@store');
-Route::get('/articles/{post_name}', 'ArticleController@show')->name('posts');
+Route::resource('articles','ArticleController');
+Route::post('articles/{post_name}','CommentsController@store')->name('commentsadd');

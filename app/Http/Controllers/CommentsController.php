@@ -19,6 +19,6 @@ class CommentsController extends Controller
             'comment_date' => now(),
             'post_id' => $post->id]
         );
-        return redirect()->route('posts',$post->post_name);
+        return redirect()->route('articles.show',$post->post_name);
     }
 }
