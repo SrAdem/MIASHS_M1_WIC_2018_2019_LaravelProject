@@ -11,17 +11,15 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-$factory->define(App\Post::class, function (Faker $faker) {
+$factory->define(App\Comments::class, function (Faker $faker) {
     $users = App\User::pluck('id')->toArray();
+    $posts = App\Post::pluck('id')->toArray();
     return [
-        'post_author' => $faker->randomElement($users),
-        'post_date' => now(),
-        'post_content' => $faker->paragraph(),
-        'post_title' => $faker->sentence(),
-        'post_status' => $faker->word(),
-        'post_name' => $faker->unique()->word(),
-        'post_type' => 'article',
-        'post_category' => $faker->word()
+        'post_id' => $faker->randomElement($posts),
+        'comment_email' => $faker->unique()->safeEmail,
+        'comment_date' => now(),
+        'comment_content' => $faker->paragraph(),
+        'comment_name' => $faker->unique()->word(),
     ];
 });
 ?>

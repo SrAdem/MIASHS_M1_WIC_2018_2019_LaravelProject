@@ -18,9 +18,10 @@
 Route::get('/', 'HomeController@index');
 Route::get('/articles', 'ArticleController@index');
 Route::get('/contact', 'ContactController@index');
-Route::get('/articles/{post_name}', 'ArticleController@show');
 Route::get('contact','ContactController@create');
 Route::post('contact','ContactController@store');
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('articles/{post_name}','ArticleController@create');
+Route::post('articles/{post_name}','ArticleController@store');
+Route::get('/articles/{post_name}', 'ArticleController@show')->name('posts');
+Auth::routes();
