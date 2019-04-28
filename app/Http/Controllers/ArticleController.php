@@ -89,10 +89,6 @@ class ArticleController extends Controller
                 'post_title' => $request->input('post_title'),
                 'post_content' =>  $request->input('post_content'),
                 'post_date' => now(),
-                'post_status' => 'test',
-                'post_name' => $name[0],
-                'post_type' => 'article',
-                'post_category' => 'test'
                 ]
             );
         }
@@ -102,7 +98,7 @@ class ArticleController extends Controller
         }
          //redirect to article index page
         return redirect()->route('articles.index')
-                        ->with('success','Article ajouté avec succès'); 
+                        ->with('success','Article mis à jour avec succès'); 
  
     }
  
@@ -111,6 +107,6 @@ class ArticleController extends Controller
         $post = \App\Post::where('post_name',$post_name)->first();
         $post->delete();
         return redirect()->route('articles.index')
-                        ->with('success','Article deleted successfully');
+                        ->with('success','Article supprimé avec succès');
     }
 }
