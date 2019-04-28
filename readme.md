@@ -2,11 +2,12 @@
 
 ## Guide d'installation :
 
-1. Clôner le répertoire git à l'aide de l'exécution de la commande : "git clone https://github.com/SrAdem/MIASHS_M1_WIC_2018_2019_LaravelProject.git " dans le terminal dans le répertoire souhaité.
+1. Clôner le répertoire git à l'aide de l'exécution de la commande : 
+" *git clone https://github.com/SrAdem/MIASHS_M1_WIC_2018_2019_LaravelProject.git* " dans le terminal dans le répertoire souhaité.
 
 2. Installer composer : 
-    *sous Linux : dans le terminal exécuter : apt install composer
-    *sous windows : télécharger et lancer le fichier Composer-Setup.exe
+    * sous Linux : dans le terminal exécuter : apt install composer
+    * sous windows : télécharger et lancer le fichier Composer-Setup.exe
 
 3. Installer Laravel avec l'éxécution de la commande : "composer global require laravel\installer" dans le terminal.
 
